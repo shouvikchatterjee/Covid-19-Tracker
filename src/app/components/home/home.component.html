@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-white text-center">
+            <h1 class="display-5">Corona Covid-19 Tracker</h1>
+            <hr>
+            <div class="row">
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            New Confirmed
+                        </div>
+                        <div class="value">
+                            {{globalDatas.newConfirmed}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            New Deaths
+                        </div>
+                        <div class="value">
+                            {{globalDatas.newDeaths}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            New Recovered
+                        </div>
+                        <div class="value">
+                            {{globalDatas.newRecovered}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            Total Confirmed
+                        </div>
+                        <div class="value">
+                            {{globalDatas.totalConfirmed}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            Total Deaths
+                        </div>
+                        <div class="value">
+                            {{globalDatas.totalDeaths}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            Total Recovered
+                        </div>
+                        <div class="value">
+                            {{globalDatas.totalRecovered}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <canvas class="mt-5" id="myChart" width="400" height="auto"></canvas>
+                </div>
+                <div class="col-md-6 mx-auto">
+                    <canvas class="mt-5" id="myChart2" width="400" height="auto"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

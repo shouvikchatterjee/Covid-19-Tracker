@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-white text-center">
+            <h1 class="display-5">Corona Covid-19 Tracker country wise</h1>
+            <hr>
+            <div class="row">
+                <div class="col-4 mx-auto">
+                    <div class="form-group">
+                        <form [formGroup]="form">
+                            <select
+                                (change)="onChange()"
+                                formControlName="country"
+                                class="form-control">
+                                <option
+                                    [ngValue]="null"
+                                    selected
+                                    disabled>
+                                    Select Country
+                                </option>
+                                <option
+                                    *ngFor="let country of countries"
+                                    [ngValue]="country.CountryCode">
+                                    {{country.Country}}
+                                </option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            New Confirmed
+                        </div>
+                        <div class="value">
+                            {{countryData.newConfirmed}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            New Deaths
+                        </div>
+                        <div class="value">
+                            {{countryData.newDeaths}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            New Recovered
+                        </div>
+                        <div class="value">
+                            {{countryData.newRecovered}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            Total Confirmed
+                        </div>
+                        <div class="value">
+                            {{countryData.totalConfirmed}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            Total Deaths
+                        </div>
+                        <div class="value">
+                            {{countryData.totalDeaths}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 card p-3 mt-2 mx-auto">
+                    <div class="ui mini statistic">
+                        <div class="label">
+                            Total Recovered
+                        </div>
+                        <div class="value">
+                            {{countryData.totalRecovered}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <canvas class="mt-5" id="myChart3" width="400" height="auto"></canvas>
+                </div>
+                <div class="col-md-6 mx-auto">
+                    <canvas class="mt-5" id="myChart4" width="400" height="auto"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

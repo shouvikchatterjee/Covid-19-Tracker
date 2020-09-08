@@ -1,0 +1,20 @@
+.active {
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+a:active {
+    text-decoration: none;
+    color: blue;
+}
